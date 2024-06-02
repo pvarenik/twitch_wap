@@ -1,6 +1,8 @@
 # WAP Testing with Selenium
 This repository contains automated tests for the Twitch Web Application (WAP) using Selenium and the Page Object pattern.
 
+![caption](demo.gif)
+
 ## Prerequisites
 
 - Python 3.x
@@ -15,7 +17,7 @@ This repository contains automated tests for the Twitch Web Application (WAP) us
 
 1. Navigate to the WAP test directory.
 2. Run the test using the following command:
-```pytest test_wap.py```
+```pytest test_wap.py``` or just ```pytest```
 
 ## Expected Result
 
@@ -25,4 +27,4 @@ The test should open the Twitch website in mobile emulation mode, perform a sear
 
 The test results will be displayed in the terminal after running the tests. If all tests pass, you will see a success message. If any test fails, you will see an error message with details about the failure.
 
-![caption](demo.gif)
+![Test Results](streamer_page_mobile.png "Screenshot")
