@@ -8,9 +8,8 @@ class TwitchHomePage(BasePage):
     URL = 'https://m.twitch.tv/'
     SEARCH_ICON = (By.CSS_SELECTOR, 'a[aria-label="Search"]')
     SEARCH_BAR = (By.CSS_SELECTOR, 'input[type="search"]')
-    CLOSE_COOKIES_BUTTON = (By.CSS_SELECTOR, "[class^='ScCoreButtonLabel-']")
-    ACCEPT_COOKIES_BUTTON = (By.LINK_TEXT, 'Accept')
-
+    COOKIES_BUTTON = (By.XPATH, '//div[contains(@class, "ScCoreButtonLabel-") and div[.="Close" or .="Accept"]]')
+    
     def load(self):
         self.driver.get(self.URL)
 
@@ -22,10 +21,5 @@ class TwitchHomePage(BasePage):
         self.press_enter(self.SEARCH_BAR)
         
     def close_cookies_click(self):
-        accept_button = WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(self.CLOSE_COOKIES_BUTTON)
-        )
-        accept_button.click()
-        
-    def accept_cookies_click(self):
-        BasePage.accept_cookies(self, self.ACCEPT_COOKIES_BUTTON)
+        close_button = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(self.COOKIES_BUTTON))
+        close_button.click()
