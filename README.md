@@ -4,8 +4,6 @@ This repository contains automated tests for the Twitch Web Application (WAP) us
 ## Prerequisites
 
 - Python 3.x
-- Selenium
-- Google Chrome Driver
 
 ## Setup
 
@@ -27,15 +25,4 @@ The test should open the Twitch website in mobile emulation mode, perform a sear
 
 The test results will be displayed in the terminal after running the tests. If all tests pass, you will see a success message. If any test fails, you will see an error message with details about the failure.
 
-## Notes
-
-- The tests are designed to be run in a headless browser for CI/CD integration. If you want to see the browser while running the tests, you can modify the `headless` option in the `webdriver.Chrome()` method.
-- The screenshot will be saved as `streamer_page_mobile.png` in the same directory as the test script.
-
-## Contributing
-
-If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+![caption](demo.gif)
